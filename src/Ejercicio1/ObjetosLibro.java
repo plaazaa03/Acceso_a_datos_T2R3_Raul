@@ -1,3 +1,7 @@
+package Ejercicio1;
+
+import Ejercicio1.Libro;
+
 import java.io.*;
 import java.util.Scanner;
 
@@ -5,11 +9,11 @@ public class ObjetosLibro {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
 
-        //Almacenar datos de la clase Libro en el fichero BibliotecaObjetos.dat
+        //Almacenar datos de la clase Ejercicio1.Libro en el fichero BibliotecaObjetos.dat
         try{
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("BibliotecaObjetos.dat"));
             System.out.println("===========");
-            System.out.println("Ingrese los datos del Libro");
+            System.out.println("Ingrese los datos del Ejercicio1.Libro");
             System.out.println("ISBN: ");
             Long isbn = scanner.nextLong();
             System.out.println("Titulo: ");
@@ -21,7 +25,7 @@ public class ObjetosLibro {
             Libro libro = new Libro(isbn, autor, titulo);
             objectOutputStream.writeObject(libro);
 
-            System.out.println("Libro almacenado en el fichero BibliotecaObjetos.");
+            System.out.println("Ejercicio1.Libro almacenado en el fichero BibliotecaObjetos.");
         }catch (IOException e){
             e.printStackTrace();
         }

@@ -1,3 +1,4 @@
+package Ejercicio1;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
